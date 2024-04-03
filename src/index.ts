@@ -1,10 +1,5 @@
-import { ChatOpenAI } from "@langchain/openai";
+import { simple, prompt } from "./simple";
+import { retrieval } from "./deeper";
+import { conversation } from "./conversation";
 
-async function main() {
-  const llm = new ChatOpenAI({});
-  const res = await llm.invoke("Hello, world!");
-
-  console.log("res :>> ", res);
-}
-
-main();
+conversation();
